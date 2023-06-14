@@ -1,0 +1,247 @@
+:root{
+    --clr-primary-hsl-400:252, 100%, 67%;
+    --clr-primary-hsl-500:256,72% ,67%;
+    --clr-secondary-hsl-400:241, 81%, 54% ;
+    --clr-secondary-hsl-500:241, 72%, 46% ;
+
+    --clr-primary-400:hsl(var(--clr-primary-hsl-400));
+    --clr-primary-500:hsla(var(--clr-primary-hsl-500));
+    --clr-secondary-400:hsl(var(--clr-secondary-hsl-400));
+
+
+    --gradient-primary: linear-gradient( 
+    var(--clr-primary-400), 
+    var(--clr-secondary-400));
+
+    --gradient-to-transparent: linear-gradient(
+    var(--clr-primary-500),
+    hsl(var(--clr-secondary-hsl-500), 0));
+}
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500&display=swap%27');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    
+    height: auto;
+}
+
+.container{
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.212);
+}
+.box1{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    width: 280px;
+    height: 385px;
+    background: var(--gradient-primary);
+    border-radius: 25px;
+}
+.box1 .r{
+    top: 30px;
+    position: absolute;
+    color:hsla(0,0%,81%) ;
+}
+.box2{
+    flex-direction: column;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 280px;
+    height: 385px;
+    background: #fff;
+    border-radius: 25px;
+}
+.circle{
+    position: absolute;
+    top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 150px;
+    background: var(--gradient-to-transparent);
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+}
+.circle  b{
+    padding: 20px;
+    position: relative;
+    top: -5px;
+    font-size: 50;
+    color: #fff;
+}
+.circle   span{
+    position: absolute;
+    top: 100px;
+    font-size: 15px;
+    color: hsl(0, 0%, 60%);
+}
+.box1 .b{
+    position: relative;
+    top: 75px;
+    color: #fff;
+    font-size: 24px;
+}
+.box1 p{
+    margin-right: 50px;
+    margin-left: 50px;
+
+    position: absolute;
+    font-size: 13px;
+    color: hsl(0, 0%, 60%);
+    text-align: center ;
+    top: 290px;;
+}
+.box{
+    display: flex;
+    align-items: center;
+    height:40px;
+    width: 220px;
+    margin: 7px;
+    border-radius: 5px;
+    font-size: 18px;
+    position: relative;
+    bottom: 20px;
+}
+.summary{
+    position:relative;
+    top:-40;
+    left: -60;
+    font-size: 20px;
+    font-weight: bold;
+    color: hsl(224, 30%, 27%);
+}
+.reaction{
+    color: hsl(6, 100%, 67%);
+    background:hsla(6, 100%, 67%, 0.123);
+}
+.i{
+    margin:0 10px ;
+}
+.rate{
+    position: absolute;
+    right: 20px;
+    color: hsl(0, 0%, 60%);
+}
+.rate span{
+    color: hsl(224, 30%, 27%);
+    font-weight: bold;
+}
+.memory{
+    color: hsl(39, 100%, 56%);
+    background:hsla(39, 100%, 56%, 0.116);
+}
+.verbal{
+    color: hsl(166, 100%, 37%);
+    background:hsl(39, 100%, 56%,0);
+}
+.visual{
+    color:hsl(256, 89%, 41%);
+    background:hsla(234, 85%, 45%, 0.082);
+}
+button{
+    width: 220px;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    background: hsl(224, 30%, 27%);
+    font-size: 18px;
+    color: #fff;
+}
+button:hover {
+    cursor: pointer;
+    background: var(--gradient-primary);
+}
+@media screen and (max-width: 600px){
+    .container{
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+
+    }
+    .box1 {
+        display: flex;
+        flex-direction:column ;
+        width: 100%;
+        height: auto;
+        flex-basis:100% ;position: relative;
+        border-radius: 0px 0px 40px 40px;
+        position: relative;
+    }
+
+    .box2 {
+        display: flex;
+        flex-direction:column ;
+        width: 100%;
+        height: auto;
+        flex-basis:100% ;
+        padding: 20px 0px 0px 0px;
+    }
+    
+
+    body{
+        display: block;
+        height: 100vh;
+    }
+
+
+    .box1 h3{
+        margin-bottom: 40px;
+    }
+    .box1 p{
+        position: absolute;
+        
+    }
+     
+    .reaction{
+        border-radius: 8px;
+        padding: 25px 25px 25px 5px;
+        width: 80%;
+    }
+    .memory{
+        border-radius: 8px;
+        padding: 25px 25px 25px 5px;
+        width: 80%;
+    }
+    .verbal{
+        border-radius: 8px;
+        padding: 25px 5px 25px 5px;
+        background-color: rgba(0, 189, 145, 0.096);
+        width: 80%;
+    }
+    .visual{
+        border-radius: 8px;
+        padding: 25px 25px 25px 5px;
+        width: 80%;
+    }
+
+    .rate{
+        position: absolute;
+        right: 20px;
+    }
+   .summary{
+    left: -100;
+   }
+}
