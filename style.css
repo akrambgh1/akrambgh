@@ -77,7 +77,7 @@ body{
     align-items: center;
     height: 150px;
     width: 150px;
-    background: var(--gradient-to-transparent);
+    background-image: var(--gradient-to-transparent);
     aspect-ratio: 1 / 1;
     border-radius: 50%;
 }
